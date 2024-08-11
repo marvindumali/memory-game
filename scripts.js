@@ -14,6 +14,11 @@ const images = [
   "🍍",
 ];
 
+// Get audio elements
+const flipSound = document.getElementById("flip-sound")
+const matchSound = document.getElementById("match-sound")
+const successSound = document.getElementById("success-sound")
+
 // Shuffle function
 function shuffle(array) {
   for (let i = array.length - 1; i > 0; i--) {
@@ -49,6 +54,7 @@ function flipCard(card) {
   if (lockBoard || card === firstCard || card.classList.contains("flipped"))
     return;
 
+  flipSound.play(); // Play flip sound
   card.classList.add("flipped");
   card.querySelector("span").style.visibility = "visible";
 
@@ -67,6 +73,7 @@ function checkMatch() {
   const isMatch = firstCard.dataset.image === secondCard.dataset.image;
 
   if (isMatch) {
+    matchSound.play(); // Play match sound
     firstCard.classList.add("matched");
     secondCard.classList.add("matched");
     matchedCount += 2;
@@ -92,6 +99,8 @@ function resetBoard() {
 
 function showSuccessMessage() {
   const successMessage = document.getElementById("success-message");
+  successSound.play(); // Play success sound
+
   successMessage.classList.remove("hidden");
   document.getElementById("again-button").classList.remove("hidden");
 }
