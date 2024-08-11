@@ -1,0 +1,90 @@
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  background-color: #f4f4f4;
+  font-family: Arial, sans-serif;
+}
+
+.container {
+  text-align: center;
+}
+
+h1 {
+  font-size: 2em;
+  margin-bottom: 60px;
+}
+
+.game-board {
+  display: grid;
+  grid-template-columns: repeat(4, 100px);
+  gap: 10px;
+  margin: 0 auto;
+}
+
+.card {
+  width: 100px;
+  height: 100px;
+  background-color: #ddd;
+  border: 1px solid #ccc;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2em;
+  cursor: pointer;
+  position: relative;
+}
+
+.card span {
+  display: block;
+  font-size: 2em;
+  visibility: hidden; /* Hide content initially */
+}
+
+.card.flipped span,
+.card.matched span {
+  visibility: visible; /* Show content when flipped or matched */
+}
+
+.card.flipped {
+  background-color: #fff;
+  cursor: default;
+}
+
+.card.matched {
+  background-color: #4caf50;
+  cursor: default;
+}
+
+.card::after {
+  content: "";
+  display: block;
+  padding-top: 100%;
+}
+
+.hidden {
+  display: none;
+}
+
+#success-message {
+  margin-top: 60px;
+  font-size: 1.5em;
+  color: #4caf50;
+}
+
+#again-button {
+  margin-top: 10px;
+  padding: 10px 30px;
+  background-color: #000000;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 18px;
+}
+
+#again-button:hover {
+  background-color: #45a049;
+}
