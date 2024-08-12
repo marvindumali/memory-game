@@ -1,6 +1,6 @@
 # Memory Game
 
-This project is a simple implementation of the classic memory card game using HTML, CSS, and JavaScript. The game includes features such as reshuffling cards, sounds, and a success message when all pairs are matched. You can view the live version of the game [here]https://memory-game-omega-azure.vercel.app/.
+This project is a simple implementation of the classic memory card game using HTML, CSS, and JavaScript. The game includes features such as reshuffling cards, sounds, and a success message when all pairs are matched. You can view the live version of the game [here](https://memory-game-omega-azure.vercel.app/).
 
 ## Features
 
